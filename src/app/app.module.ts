@@ -7,12 +7,14 @@ import { ProfilePage } from '../pages/profile/profile';
 import { GroupPage } from '../pages/group/group';
 import { GroupDetailPage } from '../pages/group/detail/detail';
 import { GroupSearchPage } from '../pages/group/search/search';
+import { CreateGroupPage } from '../pages/group/create-group/create-group';
 
 import { ChatPage } from '../pages/chat/chat';
 import { ChatroomPage } from '../pages/chat/chatroom/chatroom';
 
 import { TabsPage } from '../pages/tabs/tabs';
 import { SignInPage } from '../pages/sign-in/sign-in'
+import { GroupCreateDetailPage } from '../pages/group/create-group/group-create-detail/group-create-detail';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -43,6 +45,8 @@ export const firebaseConfig = {
     SignInPage,
     ChatroomPage,
     TabsPage,
+    CreateGroupPage,
+    GroupCreateDetailPage,
   ],
   imports: [
     BrowserModule,
@@ -66,7 +70,9 @@ export const firebaseConfig = {
     TabsPage,
     SignInPage,
     ChatroomPage,
-    TabsPage
+    TabsPage,
+    GroupCreateDetailPage,
+    CreateGroupPage,
   ],
   providers: [
     StatusBar,

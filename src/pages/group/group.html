@@ -2,11 +2,20 @@
     <ion-toolbar color='primary'>
         <ion-buttons start>
             <button ion-button icon-only (click)="goToSearch()">
-      <ion-icon name="search"></ion-icon>
-    </button>
+                <ion-icon name="search"></ion-icon>
+            </button>
         </ion-buttons>
         <ion-title>Flight Group</ion-title>
-    </ion-toolbar>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="createGroup()">
+        <ion-icon color="secondary" name="add"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+  <!-- <ion-navbar color='primary'>
+    <ion-title>Flight Group</ion-title>
+  </ion-navbar> -->
+
 </ion-header>
 
 <ion-content>
