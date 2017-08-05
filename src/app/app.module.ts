@@ -11,6 +11,7 @@ import { ChatPage } from '../pages/chat/chat';
 import { ChatroomPage } from '../pages/chat/chatroom/chatroom';
 
 import { TabsPage } from '../pages/tabs/tabs';
+import { SignInPage } from '../pages/sign-in/sign-in'
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -36,6 +37,8 @@ export const firebaseConfig = {
     GroupPage,
     GroupDetailPage,
     ChatPage,
+    TabsPage,
+    SignInPage
     ChatroomPage,
     TabsPage,
   ],
@@ -57,6 +60,8 @@ export const firebaseConfig = {
     GroupPage,
     GroupDetailPage,
     ChatPage,
+    TabsPage,
+    SignInPage
     ChatroomPage,
     TabsPage
   ],
