@@ -10,7 +10,7 @@
    <ion-list>
       <button ion-item *ngFor="let chat of chatList| async" (click)="goToRoom(chat)">
          <ion-avatar item-start>
-          <img src="assets/{{chat.dest}}.png">
+          <img src="assets/{{chat.randPhoto}}.png">
         </ion-avatar>
         <h2 ion-text color='secondary'>{{chat.name}}</h2>
         <p ion-text color='white'>{{chat.LastMessage}}</p>
