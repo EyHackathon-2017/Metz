@@ -3,10 +3,24 @@
     <ion-title>
       Profile
     </ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="setting()">
+        <ion-icon color="secondary" name="cog"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
+    <ion-grid>
+        <ion-row>
+            <ion-col col-3></ion-col>
+            <ion-col col-6>
+                <img class="circle-icon" src="{{user.photoURL}}" />
+            </ion-col>
+            <ion-col col-3></ion-col>
+        </ion-row>
+    </ion-grid>
     <ion-item>
         <p ion-text color='secondary'>Name</p>
         <span item-end ion-text color='secondary'>{{user.displayName}}</span>
@@ -18,6 +32,10 @@
     <ion-item>
         <p ion-text color='secondary'>Phone</p>
         <span item-end ion-text color='secondary'>9201 9865</span>
+    </ion-item>
+    <ion-item>
+        <p ion-text color='secondary'>Age</p>
+        <span item-end ion-text color='secondary'>25</span>
     </ion-item>
     <ion-item>
         <p ion-text color='secondary'>Gender</p>

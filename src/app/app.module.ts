@@ -4,6 +4,8 @@ import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 
 import { ProfilePage } from '../pages/profile/profile';
+import { SettingPage } from '../pages/profile/setting/setting';
+
 import { GroupPage } from '../pages/group/group';
 import { GroupDetailPage } from '../pages/group/detail/detail';
 import { GroupSearchPage } from '../pages/group/search/search';
@@ -37,6 +39,7 @@ export const firebaseConfig = {
   declarations: [
     MyApp,
     ProfilePage,
+    SettingPage,
     GroupPage,
     GroupDetailPage,
     GroupSearchPage,
@@ -63,6 +66,7 @@ export const firebaseConfig = {
   entryComponents: [
     MyApp,
     ProfilePage,
+    SettingPage,
     GroupPage,
     GroupDetailPage,
     GroupSearchPage,
