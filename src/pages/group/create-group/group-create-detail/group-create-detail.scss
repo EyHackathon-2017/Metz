@@ -1,0 +1,13 @@
+page-group-create-detail {
+    ion-label, ion-option, .select-text, .input {
+        color: color($colors, secondary);
+    }
+
+    .item-divider {
+        background-color: color($colors, secondary);
+    }
+
+    ion-item-divider {
+        color: color($colors, primary);
+    }
+}

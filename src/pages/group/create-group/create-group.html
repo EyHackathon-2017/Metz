@@ -1,0 +1,32 @@
+<!--
+  Generated template for the CreateGroupPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <!-- <ion-toolbar color="primary"> -->
+    <ion-navbar color="primary">
+      <ion-title>Choose a flight</ion-title>
+      <!-- <ion-buttons end>
+        <button ion-button icon-only (click)="confirmCreateGroup()">
+          <ion-icon color="secondary" name="arrow-forward"></ion-icon>
+        </button>
+      </ion-buttons> -->
+    </ion-navbar>
+  <!-- </ion-toolbar> -->
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-list>
+    <button ion-item *ngFor="let flight of flightList| async" (click)="goToGroupCreateDetail(flight)"> 
+      <h2 ion-text color="secondary">{{ flight.leg_orig_apt }} - {{ flight.leg_dest_apt }} </h2>
+      <span ion-text color="secondary">{{ flight.leg_orig_port }} - {{ flight.leg_dest_port }}</span>
+      <p ion-text color="secondary" item-end>{{flight.sch_dep_dateTime | amDateFormat : 'LLL'}}</p>
+    </button>
+  </ion-list>
+</ion-content>
