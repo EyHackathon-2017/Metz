@@ -1,6 +1,6 @@
 page-group-create-detail {
-    ion-option, .select-text {
-        color: color($colors, secondary);
+    ion-option, ion-input, ion-textarea, .select-text {
+        color: white;
     }
 
     .divider {
