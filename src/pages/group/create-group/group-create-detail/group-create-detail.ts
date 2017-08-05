@@ -16,13 +16,35 @@ import { AngularFireDatabase, FirebaseObjectObservable } from 'angularfire2/data
 })
 export class GroupCreateDetailPage {
 
-  public flight : FirebaseObjectObservable< any[] >;
+
+  public grpPref: GroupPreference;
   constructor(public navCtrl: NavController, public navParams: NavParams, public db: AngularFireDatabase, public navparams : NavParams) {
-    this.flight = this.navParams.get('flight');
+    this.grpPref = new GroupPreference();
+    this.grpPref.flight = this.navParams.get('flight');
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad GroupCreateDetailPage');
   }
 
+  confirmCreateGroup() {
+    this.db.list('/groups').push(this.grpPref);
+    this.navCtrl.popToRoot();
+  }
+
+}
+
+export class GroupPreference {
+    public name: string;
+    public introduction: string;
+    public people: number;
+    public people_need: number = 0;
+    public gender: string;
+    public age_down: number;
+    public age_up: number;
+    public randPhoto: number = parseInt(Math.random() * 4 + 1 + "");
+  constructor(
+  ) { }
+
+  public flight : FirebaseObjectObservable< any[] >;
 }
