@@ -1,13 +1,14 @@
 page-group-create-detail {
-    ion-label, ion-option, .select-text, .input {
+    ion-option, .select-text {
         color: color($colors, secondary);
     }
 
-    .item-divider {
-        background-color: color($colors, secondary);
+    .divider {
+        background-color: color($colors, secondary) !important;
+        color: color($colors, primary) !important;
     }
 
-    ion-item-divider {
-        color: color($colors, primary);
-    }
+    // ion-item-divider {
+    //     color: color($colors, primary);
+    // }
 }
