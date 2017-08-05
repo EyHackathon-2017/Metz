@@ -15,7 +15,7 @@ export class ChatroomPage {
     public user: User;
     public messageList : FirebaseListObservable < any[] >;
     public newMessage : string;
-    constructor(public navCtrl : NavController, public navParams : NavParams, public afDB : AngularFireDatabase,public afAuth: AngularFireAuth) {
+    constructor(public navCtrl : NavController, public navParams : NavParams, public afDB : AngularFireDatabase, public afAuth: AngularFireAuth) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
         this.newMessage = '';
@@ -23,9 +23,7 @@ export class ChatroomPage {
             .navParams
             .get('chat');
         this.chat = chat;
-        this.afAuth.authState.subscribe(user => {
-             this.user = user;
-        });
+        this.user = this.afAuth.auth.currentUser;
         this.messageList = this
             .afDB
             .list('/groups/' + chat.$key + '/messageList', {

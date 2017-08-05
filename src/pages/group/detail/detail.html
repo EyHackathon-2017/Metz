@@ -7,11 +7,11 @@
 <ion-content>
     <img  style="width:100%" src="assets/{{group.dest}}.png">
     <ion-list>
-        <ion-item-divider color="secondary">Introduction</ion-item-divider>
+        <ion-item-divider class="divider">Introduction</ion-item-divider>
         <ion-item>
             <p ion-text color='secondary'>Hello</p>
         </ion-item>
-        <ion-item-divider color="secondary">Owner</ion-item-divider>
+        <ion-item-divider class="divider">Owner</ion-item-divider>
         <ion-item >
             <p ion-text color='secondary'>Name</p>
             <span item-end ion-text color='secondary'>Eric</span>
@@ -24,7 +24,7 @@
             <p ion-text color='secondary'>Gender</p>
             <span item-end ion-text color='secondary'>M</span>
         </ion-item>
-        <ion-item-divider color="secondary">Flight Information</ion-item-divider>
+        <ion-item-divider class="divider">Flight Information</ion-item-divider>
         <ion-item>
             <p ion-text color='secondary'>Flight Code</p>
             <span item-end ion-text color='secondary'> {{group.flight.carrier_code}} -- {{group.flight.fit_num}}</span>
