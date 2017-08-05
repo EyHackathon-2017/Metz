@@ -46,6 +46,10 @@ $colors: (
 .toolbar-title-ios{
 	color: color($colors, secondary)!important;
 }
+.back-button-ios{
+  color: color($colors, secondary)!important;
+}
+
 $toolbar-active-color	:color($colors, secondary);
 $toolbar-inactive-color	:color($colors, secondary);
 $background-color :color($colors, primary);

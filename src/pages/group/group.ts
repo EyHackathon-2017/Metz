@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController , App} from 'ionic-angular';
 import { AngularFireDatabase , FirebaseListObservable} from 'angularfire2/database';
 import { GroupDetailPage } from './detail/detail';
 
@@ -9,13 +9,13 @@ import { GroupDetailPage } from './detail/detail';
 })
 export class GroupPage {
     public groupList : FirebaseListObservable< any[] >;
-    constructor(public navCtrl: NavController, public db: AngularFireDatabase) {
+    constructor(public navCtrl: NavController, public db: AngularFireDatabase, public appCtrl : App) {
         this.groupList = this.db.list('/groups');
         
     }
 
     goToDetail (group) {
-        this.navCtrl.push(GroupDetailPage,{
+        this.appCtrl.getRootNav().push(GroupDetailPage,{
             group:group,
         });
     }
