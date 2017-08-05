@@ -8,6 +8,8 @@ import { GroupPage } from '../pages/group/group';
 import { GroupDetailPage } from '../pages/group/detail/detail';
 
 import { ChatPage } from '../pages/chat/chat';
+import { ChatroomPage } from '../pages/chat/chatroom/chatroom';
+
 import { TabsPage } from '../pages/tabs/tabs';
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -16,6 +18,7 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { HttpModule } from '@angular/http';
+import { MomentModule } from 'angular2-moment';
 
 export const firebaseConfig = {
     apiKey: "AIzaSyCe0dL00SM5o3uhhq5VUJW1M2fXSRllbbw",
@@ -33,7 +36,8 @@ export const firebaseConfig = {
     GroupPage,
     GroupDetailPage,
     ChatPage,
-    TabsPage
+    ChatroomPage,
+    TabsPage,
   ],
   imports: [
     BrowserModule,
@@ -41,6 +45,7 @@ export const firebaseConfig = {
         {mode: 'ios'}
     ),
     HttpModule,
+    MomentModule,
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireDatabaseModule,
     AngularFireAuthModule
@@ -52,6 +57,7 @@ export const firebaseConfig = {
     GroupPage,
     GroupDetailPage,
     ChatPage,
+    ChatroomPage,
     TabsPage
   ],
   providers: [

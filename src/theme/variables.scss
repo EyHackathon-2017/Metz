@@ -40,6 +40,12 @@ $colors: (
   dark:       #222,
   white:    #fff,
 );
+.toolbar-title-md{
+	color: color($colors, secondary)!important;
+}
+.toolbar-title-ios{
+	color: color($colors, secondary)!important;
+}
 
 $background-color :color($colors, primary);
 $tabs-background:color($colors, primary);

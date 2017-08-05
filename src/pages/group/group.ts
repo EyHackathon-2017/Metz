@@ -4,7 +4,7 @@ import { AngularFireDatabase , FirebaseListObservable} from 'angularfire2/databa
 import { GroupDetailPage } from './detail/detail';
 
 @Component({
-    selector: 'page-home',
+    selector: 'page-group',
     templateUrl: 'group.html'
 })
 export class GroupPage {
