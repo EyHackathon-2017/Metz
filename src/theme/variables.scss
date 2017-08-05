@@ -14,7 +14,6 @@ $app-direction: ltr;
 
 @import "ionic.globals";
 
-
 // Shared Variables
 // --------------------------------------------------
 // To customize the look and feel of this app, you can override
@@ -34,14 +33,20 @@ $app-direction: ltr;
 // The "primary" color is the only required color in the map.
 
 $colors: (
-  primary:    #488aff,
-  secondary:  #32db64,
+  primary:    #0D47A1,
+  secondary:  #00E676,
   danger:     #f53d3d,
   light:      #f4f4f4,
-  dark:       #222
+  dark:       #222,
+  white:    #fff,
 );
 
 
+$tabs-background:color($colors, primary);
+$tabs-md-tab-color-inactive: color($colors, secondary);
+$tabs-ios-tab-color-inactive: color($colors, secondary);
+$tabs-ios-tab-color-active : color($colors, secondary);
+$tabs-md-tab-color-active	: color($colors, secondary);
 // App iOS Variables
 // --------------------------------------------------
 // iOS only Sass variables can go here
