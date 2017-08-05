@@ -38,7 +38,7 @@ export const firebaseConfig = {
     GroupDetailPage,
     ChatPage,
     TabsPage,
-    SignInPage
+    SignInPage,
     ChatroomPage,
     TabsPage,
   ],
@@ -61,7 +61,7 @@ export const firebaseConfig = {
     GroupDetailPage,
     ChatPage,
     TabsPage,
-    SignInPage
+    SignInPage,
     ChatroomPage,
     TabsPage
   ],
