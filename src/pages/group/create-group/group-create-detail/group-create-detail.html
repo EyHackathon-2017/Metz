@@ -9,7 +9,9 @@
   <ion-navbar color="primary">
     <ion-title>Define Group</ion-title>
     <ion-buttons end>
-      <button ion-button icon-only color="secondary" ><ion-icon name="checkmark"> </ion-icon></button>
+      <button ion-button icon-only color="secondary" (click)="confirmCreateGroup()" >
+        <ion-icon name="checkmark"> </ion-icon>
+      </button>
     </ion-buttons>
   </ion-navbar>
 
@@ -19,42 +21,43 @@
 <ion-content padding>
   <ion-list>
     <ion-item>
-      <ion-label>Group Name</ion-label>
-      <ion-input placeholder="Name your group"></ion-input>
+      <ion-label color="secondary">Group Name</ion-label>
+      <ion-input [(ngModel)]="this.grpPref.name" placeholder="Name your group" text-right></ion-input>
     </ion-item>
 
     <ion-item>
-      <ion-label>Introduction</ion-label>
+      <ion-label color="secondary">Introduction</ion-label>
     </ion-item>
     <ion-item>
-      <ion-textarea placeholder="Introduce your plans and attract others join your group!">
+      <ion-textarea [(ngModel)]="grpPref.introduction" placeholder="Introduce your plans and attract others join your group!">
       </ion-textarea>
     </ion-item>
 
     <ion-item-divider class="divider">Preferences</ion-item-divider>
 
     <ion-item>
-      <ion-label color='secondary'>Number of people</ion-label>
-      <ion-input placeholder="Less than {{flight.available_seat}}"></ion-input>
+      <ion-label color='secondary'>Max Head Count</ion-label>
+      <ion-input [(ngModel)]="grpPref.people" text-right type="number" placeholder="Less than {{grpPref.flight.available_seat}}"></ion-input>
     </ion-item>
 
     <ion-item>
       <ion-label color='secondary'>Gender</ion-label>
-      <ion-select>
-        <ion-option>Any</ion-option>
-        <ion-option>Female</ion-option>
-        <ion-option>Male</ion-option>
+      <ion-select [(ngModel)]="grpPref.gender" >
+        <ion-option value="A">Any</ion-option>
+        <ion-option value="F">Female</ion-option>
+        <ion-option value="M">Male</ion-option>
       </ion-select>
     </ion-item>
 
     <ion-item-divider class="divider">Age bracket</ion-item-divider>
     <ion-item>
       <ion-label color='secondary'>Minimum</ion-label>
-      <ion-input type="number"></ion-input>
+      <ion-input [(ngModel)]="grpPref.age_down" type="number" text-right></ion-input>
     </ion-item>
     <ion-item>
       <ion-label color='secondary'>Maximum</ion-label>
-      <ion-input type="number"></ion-input>
+      <ion-input [(ngModel)]="grpPref.age_up" type="number" text-right></ion-input>
     </ion-item>
+
   </ion-list>
 </ion-content>

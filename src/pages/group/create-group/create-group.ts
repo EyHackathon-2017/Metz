@@ -21,7 +21,12 @@ export class CreateGroupPage {
   public flight: FirebaseListObservable< any[] >;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public db: AngularFireDatabase) {
-    this.flightList = this.db.list('/flight')
+    this.flightList = this.db.list('/flight', {
+      query: {
+        orderByChild: 'available_seat',
+        startAt : '20'
+      }
+    })
   }
 
   ionViewDidLoad() {
