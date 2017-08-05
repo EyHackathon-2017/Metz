@@ -1,7 +1,6 @@
 import {Component, ViewChild} from '@angular/core';
 import {NavController, NavParams, Content} from 'ionic-angular';
 import {AngularFireDatabase, FirebaseListObservable} from 'angularfire2/database';
-import {Http, Headers, RequestOptions} from '@angular/http';
 import { AngularFireAuth } from 'angularfire2/auth';
 export class User {
     public email : string;
@@ -16,7 +15,7 @@ export class ChatroomPage {
     public user: User;
     public messageList : FirebaseListObservable < any[] >;
     public newMessage : string;
-    constructor(public navCtrl : NavController, public http : Http, public navParams : NavParams, public afDB : AngularFireDatabase,public afAuth: AngularFireAuth) {
+    constructor(public navCtrl : NavController, public navParams : NavParams, public afDB : AngularFireDatabase,public afAuth: AngularFireAuth) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
         this.newMessage = '';

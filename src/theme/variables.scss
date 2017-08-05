@@ -46,7 +46,8 @@ $colors: (
 .toolbar-title-ios{
 	color: color($colors, secondary)!important;
 }
-
+$toolbar-active-color	:color($colors, secondary);
+$toolbar-inactive-color	:color($colors, secondary);
 $background-color :color($colors, primary);
 $tabs-background:color($colors, primary);
 $tabs-md-tab-color-inactive: color($colors, secondary);

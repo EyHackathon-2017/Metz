@@ -11,8 +11,7 @@ export class GroupDetailPage {
     public flighKey: String;
     constructor(public navCtrl: NavController, public db: AngularFireDatabase, public navParams : NavParams) {
         this.flighKey = this.navParams.get('key');
-        this.group = this.navParams.get('group');
-        this.flight = this.db.object('/flight/' + this.flighKey);
+        this.group = this.navParams.get('group');  
     }
 
 }

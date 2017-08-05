@@ -17,7 +17,6 @@ export class GroupPage {
     goToDetail (group) {
         this.navCtrl.push(GroupDetailPage,{
             group:group,
-            key: group.flight
         });
     }
 

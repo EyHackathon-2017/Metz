@@ -9,20 +9,41 @@
     <ion-list>
         <ion-item-divider color="secondary">Introduction</ion-item-divider>
         <ion-item>
-            <p ion-text color='white'>Hello</p>
+            <p ion-text color='secondary'>Hello</p>
         </ion-item>
         <ion-item-divider color="secondary">Owner</ion-item-divider>
         <ion-item >
-            <p ion-text color='white'>Name</p>
-            <span item-end ion-text color='white'>Eric</span>
+            <p ion-text color='secondary'>Name</p>
+            <span item-end ion-text color='secondary'>Eric</span>
         </ion-item>
         <ion-item>
-            <p ion-text color='white'>Age</p>
-            <span item-end ion-text color='white'>23</span>
+            <p ion-text color='secondary'>Age</p>
+            <span item-end ion-text color='secondary'>23</span>
         </ion-item>
         <ion-item>
-            <p ion-text color='white'>Gender</p>
-            <span item-end ion-text color='white'>M</span>
+            <p ion-text color='secondary'>Gender</p>
+            <span item-end ion-text color='secondary'>M</span>
+        </ion-item>
+        <ion-item-divider color="secondary">Flight Information</ion-item-divider>
+        <ion-item>
+            <p ion-text color='secondary'>Flight Code</p>
+            <span item-end ion-text color='secondary'> {{group.flight.carrier_code}} -- {{group.flight.fit_num}}</span>
+        </ion-item>
+        <ion-item>
+            <p ion-text color='secondary'>Origin</p>
+            <span item-end ion-text color='secondary' [innerHTML]="group.flight.leg_orig_apt"></span>
+        </ion-item>
+        <ion-item>
+            <p ion-text color='secondary'>Destination</p>
+            <span item-end ion-text color='secondary' [innerHTML]="group.flight.leg_dest_apt"></span>
+        </ion-item>
+        <ion-item>
+            <p ion-text color='secondary'>Date Time</p>
+            <span item-end ion-text color='secondary' [innerHTML]="group.flight.act_arr_dateTime"></span>
+        </ion-item>
+        <ion-item>
+            <p ion-text color='secondary'>Avaibale Seat</p>
+            <span item-end ion-text color='secondary' [innerHTML]="group.flight.available_seat"></span>
         </ion-item>
     </ion-list>
 </ion-content>
