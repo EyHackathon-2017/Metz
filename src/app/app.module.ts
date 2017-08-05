@@ -9,6 +9,7 @@ import { GroupDetailPage } from '../pages/group/detail/detail';
 
 import { ChatPage } from '../pages/chat/chat';
 import { TabsPage } from '../pages/tabs/tabs';
+import { SignInPage } from '../pages/sign-in/sign-in'
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -33,7 +34,8 @@ export const firebaseConfig = {
     GroupPage,
     GroupDetailPage,
     ChatPage,
-    TabsPage
+    TabsPage,
+    SignInPage
   ],
   imports: [
     BrowserModule,
@@ -52,7 +54,8 @@ export const firebaseConfig = {
     GroupPage,
     GroupDetailPage,
     ChatPage,
-    TabsPage
+    TabsPage,
+    SignInPage
   ],
   providers: [
     StatusBar,
