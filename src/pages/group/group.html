@@ -22,11 +22,11 @@
     <ion-list>
         <button ion-item *ngFor="let group of groupList| async" (click)="goToDetail(group)">
          <ion-thumbnail item-start>
-          <img src="assets/{{group.dest}}.png">
+          <img src="assets/{{group.randPhoto}}.png">
         </ion-thumbnail>
         <h2 ion-text color='secondary'>{{group.name}}</h2>
         <span ion-text color='secondary'>People : {{group.people_need}} / {{group.people}}</span>
-        <p ion-text color='secondary' item-end>{{group.flight.fit_date}}</p>
+        <p ion-text color='secondary' item-end>{{group.flight.sch_arr_dateTime}}</p>
     </button>
     </ion-list>
 </ion-content>
