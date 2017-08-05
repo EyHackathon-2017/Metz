@@ -1,0 +1,70 @@
+page-chatroom {
+    .messages {
+        width: 100%;
+        position: absolute;
+        .messagesbox.other {
+            width: 100%;
+            float: left;
+            img.avatar {
+                margin-top: 5px;
+                margin-left: 5px;
+                width: 43px;
+                height: 43px;
+                border-radius: 50%;
+                display: block;
+                float: left;
+            }
+            .message {
+                position: relative;
+                background: #00BFA5;
+                -webkit-border-radius: 10px;
+                -moz-border-radius: 10px;
+                border-radius: 10px;
+                max-width: 70%;
+                color: #fff;
+                padding: 10px;
+                margin-top: 5px;
+                margin-left: 15px;
+                float: left;
+                .date {
+                    display: block;
+                    font-size: 10px;
+                }
+            }
+        }
+        .messagesbox.me {
+            width: 100%;
+            float: right;
+            .message {
+                margin-top: 5px;
+                margin-right: 5px;
+                max-width: 70%;
+                display: block;
+                float: right;
+                padding: 10px;
+                background: #2C3D4F;
+                color: #fff;
+                border-radius: 10px;
+                text-align: right;
+                img.avatar {
+                    display: none;
+                }
+                .date {
+                    display: block;
+                    font-size: 10px;
+                }
+            }
+        }
+    }
+    .messages-page-footer {
+        padding-right: 0;
+        .message-editor {
+            background: white;
+            border-radius: 10px;
+        }
+        .message-editor-button {
+            box-shadow: none;
+            margin: auto;
+        }
+    }
+}

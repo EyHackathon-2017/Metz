@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color="primary">
     <ion-title>
       Chat
     </ion-title>
@@ -7,11 +7,14 @@
 </ion-header>
 
 <ion-content>
-  <ion-list>
-    <ion-list-header>Follow us on Twitter</ion-list-header>
-    <ion-item>
-      <ion-icon name="ionic" item-left></ion-icon>
-      @ionicframework
-    </ion-item>
-  </ion-list>
+   <ion-list>
+      <button ion-item *ngFor="let chat of chatList| async" (click)="goToRoom(chat)">
+         <ion-avatar item-start>
+          <img src="assets/{{chat.dest}}.png">
+        </ion-avatar>
+        <h2 ion-text color='secondary'>{{chat.name}}</h2>
+        <p ion-text color='white'>{{chat.LastMessage}}</p>
+        <span ion-text color='light' item-end>{{chat.updateDt| amTimeAgo}}</span>
+    </button>
+   </ion-list>
 </ion-content>
