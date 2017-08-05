@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { Http, Response, Headers, RequestOptions } from '@angular/http';
 import { AngularFireDatabase } from 'angularfire2/database';
 
 @Component({
@@ -9,7 +8,7 @@ import { AngularFireDatabase } from 'angularfire2/database';
 })
 export class ProfilePage {
    
-    constructor(public navCtrl: NavController, private http: Http,db: AngularFireDatabase) {
+    constructor(public navCtrl: NavController, public db: AngularFireDatabase) {
 
     }
 

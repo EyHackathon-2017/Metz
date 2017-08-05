@@ -5,6 +5,8 @@ import { MyApp } from './app.component';
 
 import { ProfilePage } from '../pages/profile/profile';
 import { GroupPage } from '../pages/group/group';
+import { GroupDetailPage } from '../pages/group/detail/detail';
+
 import { ChatPage } from '../pages/chat/chat';
 import { TabsPage } from '../pages/tabs/tabs';
 
@@ -29,6 +31,7 @@ export const firebaseConfig = {
     MyApp,
     ProfilePage,
     GroupPage,
+    GroupDetailPage,
     ChatPage,
     TabsPage
   ],
@@ -47,6 +50,7 @@ export const firebaseConfig = {
     MyApp,
     ProfilePage,
     GroupPage,
+    GroupDetailPage,
     ChatPage,
     TabsPage
   ],
