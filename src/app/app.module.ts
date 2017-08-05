@@ -13,6 +13,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
+import { HttpModule } from '@angular/http';
 
 export const firebaseConfig = {
     apiKey: "AIzaSyCe0dL00SM5o3uhhq5VUJW1M2fXSRllbbw",
@@ -36,6 +37,7 @@ export const firebaseConfig = {
     IonicModule.forRoot(MyApp,
         {mode: 'ios'}
     ),
+    HttpModule,
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireDatabaseModule,
     AngularFireAuthModule
