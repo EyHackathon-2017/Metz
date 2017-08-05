@@ -49,7 +49,16 @@ $colors: (
 .back-button-ios{
   color: color($colors, secondary)!important;
 }
-
+.bar-button-ios{
+  color: color($colors, secondary)!important;
+}
+.select-text{
+  color: color($colors, secondary)!important;
+}
+.select-ios .select-icon .select-icon-inner{
+  color: color($colors, secondary)!important;
+}
+$picker-md-option-selected-color	:color($colors, secondary);
 $toolbar-active-color	:color($colors, secondary);
 $toolbar-inactive-color	:color($colors, secondary);
 $background-color :color($colors, primary);

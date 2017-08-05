@@ -16,7 +16,7 @@ page-chatroom {
             }
             .message {
                 position: relative;
-                background: #00BFA5;
+                background: color($colors , secondary);
                 -webkit-border-radius: 10px;
                 -moz-border-radius: 10px;
                 border-radius: 10px;
@@ -42,8 +42,8 @@ page-chatroom {
                 display: block;
                 float: right;
                 padding: 10px;
-                background: #2C3D4F;
-                color: #fff;
+                background: color($colors , light);
+                color: #000;
                 border-radius: 10px;
                 text-align: right;
                 img.avatar {
@@ -60,9 +60,9 @@ page-chatroom {
         padding-right: 0;
         .message-editor {
             background: white;
-            border-radius: 10px;
         }
         .message-editor-button {
+            background: color($colors , primary);
             box-shadow: none;
             margin: auto;
         }

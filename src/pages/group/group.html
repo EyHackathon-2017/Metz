@@ -1,19 +1,23 @@
 <ion-header>
-  <ion-navbar color='primary'>
-    <ion-title>Flight Group</ion-title>
-  </ion-navbar>
+    <ion-toolbar color='primary'>
+        <ion-buttons start>
+            <button ion-button icon-only (click)="goToSearch()">
+      <ion-icon name="search"></ion-icon>
+    </button>
+        </ion-buttons>
+        <ion-title>Flight Group</ion-title>
+    </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-list>
-    <button ion-item *ngFor="let group of groupList| async" (click)="goToDetail(group)">
+    <ion-list>
+        <button ion-item *ngFor="let group of groupList| async" (click)="goToDetail(group)">
          <ion-thumbnail item-start>
           <img src="assets/{{group.dest}}.png">
         </ion-thumbnail>
         <h2 ion-text color='secondary'>{{group.name}}</h2>
         <span ion-text color='secondary'>People : {{group.people_need}} / {{group.people}}</span>
-        <p ion-text color='secondary' item-end>{{group.dataTime}}</p>
-
+        <p ion-text color='secondary' item-end>{{group.flight.fit_date}}</p>
     </button>
-  </ion-list>
+    </ion-list>
 </ion-content>

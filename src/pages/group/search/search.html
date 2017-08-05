@@ -1,0 +1,55 @@
+<ion-header>
+    <ion-navbar color='primary'>
+        <ion-title>Group Search</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-list>
+        <ion-item>
+            <ion-label ion-text color='secondary'>Destination</ion-label>
+            <ion-select>
+                <ion-option value="nes">Hong Kong</ion-option>
+                <ion-option value="n64">Singapore</ion-option>
+                <ion-option value="ps">Japan</ion-option>
+                <ion-option value="genesis">South Korea</ion-option>
+                <ion-option value="saturn">Beijing</ion-option>
+                <ion-option value="snes">Thailand</ion-option>
+            </ion-select>
+        </ion-item>
+        <ion-item>
+            <ion-label ion-text color='secondary'>Size of Group</ion-label>
+            <ion-select>
+                <ion-option value="nes">1</ion-option>
+                <ion-option value="n64">2</ion-option>
+                <ion-option value="ps">3</ion-option>
+                <ion-option value="genesis">4</ion-option>
+                <ion-option value="saturn">5</ion-option>
+                <ion-option value="snes">6</ion-option>
+            </ion-select>
+        </ion-item>
+        <ion-item>
+            <ion-label ion-text color='secondary'>Date</ion-label>
+            <ion-select>
+                <ion-option value="nes">Tomorrow</ion-option>
+                <ion-option value="n64">2 Days Later</ion-option>
+                <ion-option value="snes">3 Days Later</ion-option>
+                <ion-option value="ps">4 Days Later</ion-option>
+            </ion-select>
+        </ion-item>
+        <ion-item>
+            <ion-label ion-text color='secondary'>Avaibale Seats</ion-label>
+            <ion-select>
+                <ion-option value="nes">> 20</ion-option>
+                <ion-option value="n64">> 30</ion-option>
+                <ion-option value="snes">> 50</ion-option>
+                <ion-option value="ps">> 100</ion-option>
+            </ion-select>
+        </ion-item>
+    </ion-list>
+</ion-content>
+<ion-footer>
+    <ion-toolbar color="secondary" (click)='search()'>
+        <div style="color:#fff;text-align:center">Search</div>
+    </ion-toolbar>
+</ion-footer>
