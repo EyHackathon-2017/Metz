@@ -16,7 +16,7 @@ export class ChatPage {
   
     goToRoom(chat) {
         this.navCtrl.push(ChatroomPage,{
-            group:chat,
+            chat:chat,
         });
     }
 
