@@ -26,6 +26,10 @@
         </ion-item>
         <ion-item-divider class="divider">Flight Information</ion-item-divider>
         <ion-item>
+            <p ion-text color='secondary'>Estimated Price</p>
+            <span item-end ion-text color='secondary'> {{group.price}}</span>
+        </ion-item>
+        <ion-item>
             <p ion-text color='secondary'>Flight Code</p>
             <span item-end ion-text color='secondary'> {{group.flight.carrier_code}} -- {{group.flight.fit_num}}</span>
         </ion-item>

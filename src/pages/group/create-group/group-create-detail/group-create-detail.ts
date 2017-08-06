@@ -42,6 +42,7 @@ export class GroupPreference {
     public gender: string;
     public age_down: number;
     public age_up: number;
+    public price: number  = parseInt(Math.random() * 3000 + 2000 + "");
     public randPhoto: number = parseInt(Math.random() * 4 + 1 + "");
   constructor(
   ) { }
