@@ -25,14 +25,22 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { HttpModule } from '@angular/http';
 import { MomentModule } from 'angular2-moment';
-
+import { CloudSettings, CloudModule } from '@ionic/cloud-angular';
+const cloudSettings: CloudSettings = {
+  'core': {
+    'app_id': '924740b4',
+  },
+  'insights': {
+    enabled: true
+  }
+};
 export const firebaseConfig = {
-    apiKey: "AIzaSyCe0dL00SM5o3uhhq5VUJW1M2fXSRllbbw",
-    authDomain: "metz-8eff0.firebaseapp.com",
-    databaseURL: "https://metz-8eff0.firebaseio.com",
-    projectId: "metz-8eff0",
-    storageBucket: "metz-8eff0.appspot.com",
-    messagingSenderId: "899488917710"
+  apiKey: "AIzaSyCe0dL00SM5o3uhhq5VUJW1M2fXSRllbbw",
+  authDomain: "metz-8eff0.firebaseapp.com",
+  databaseURL: "https://metz-8eff0.firebaseio.com",
+  projectId: "metz-8eff0",
+  storageBucket: "metz-8eff0.appspot.com",
+  messagingSenderId: "899488917710"
 };
 
 @NgModule({
@@ -54,11 +62,12 @@ export const firebaseConfig = {
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp,
-        {mode: 'ios'}
+      { mode: 'ios' }
     ),
     HttpModule,
     MomentModule,
     AngularFireModule.initializeApp(firebaseConfig),
+    CloudModule.forRoot(cloudSettings),
     AngularFireDatabaseModule,
     AngularFireAuthModule
   ],
@@ -81,7 +90,7 @@ export const firebaseConfig = {
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    { provide: ErrorHandler, useClass: IonicErrorHandler }
   ]
 })
-export class AppModule {}
+export class AppModule { }
